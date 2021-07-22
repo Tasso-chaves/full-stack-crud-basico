@@ -1,0 +1,53 @@
+@charset "UTF-8";
+*{margin:0; padding:0; box-sizing: border-box;}
+nav{height: 90px; padding: 2%;}
+a{cursor: pointer; font-weight: bold;}
+a.btn-nav:hover{color:#fb8500;}
+a.btn-nav{color:#ffffff;}
+
+.the-section{
+	min-height:700px;
+	background-color: #219ebc; 
+	background-position: center;
+	width: 100%;
+	padding: 30px;	
+	position: relative;
+}
+#linhaHome{
+	color: #fff;
+	border: 1px solid;
+}
+.wm{width: 50%;	float: left;}
+.clear{clear: both;}
+.center{text-align: center;}
+.the-container{
+	max-height: 1280px;
+	padding: 2% 2%;
+	margin: 0 auto;
+	margin-top: 3px;
+}
+.sombra{width: 100%; height: 100%; top: 0; left:0; position: absolute; background: rgba(0,0,0,0.4); z-index:100;}
+.the-section > .the-container{position: relative; z-index: 105;}
+.texto-centro{color:#fff; font-size: 3em; font-family: 'Ubuntu'; font-weight: bold;}
+
+.btn{font-weight: bold; border-radius: 7px;}
+.btnIndex{
+	background-color: #fff;
+	color:#fb8500;
+}
+.btnIndex:hover{
+	background-color: #219ebc;
+	color: #fff;
+}
+.btnForm{width: 100px; height: 40px; padding: 0%;}
+.botoes{padding: 1% 15%;}
+.rodape{color: #fff; text-align: center; font-size: 1.25em; padding: 15px;}
+
+/*RESPONSIVIDADE*/
+@media screen and (max-width: 640px){
+
+.wm{width: 100%;}
+nav{height: 100%;}
+.the-container{margin-top: 110px;}
+.botoes{padding: 0% 0%;}	
+}

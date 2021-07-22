@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Tasso Chaves">
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Projeto Escola</title>
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+<link href = "https://fonts.googleapis.com/css2?family=Newsreader:wght@200&display=swap" rel = "stylesheet">
+</head>
+<body>
+<!-- CABEÇALHO -->
+<header th:fragment="cabecalho">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #023047">
+	<a class="navbar-brand" th:href="@{/index}"> <img src="/img/logoPrincipal.png" width="70px" /> Sistema Tchaves</a>
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="navbar-collapse collapse justify-content-end" id="navbarMobile">
+		<a class="btn-nav nav-item nav-link" th:href="@{/index}"><i class="fas fa-home"></i> Home</a> 
+		<a class="btn-nav nav-item nav-link" th:href="@{inserirAlunos}"><i class="fas fa-user"></i> Cadastrar Aluno</a> 
+		<a data-bs-toggle="modal" data-bs-target="#modalPesquisa" class="btn-nav nav-item nav-link"><i class="fas fa-search"></i> Pesquisar Aluno</a> 
+		<form action="/logout" method="post">
+			<button type="submit" class="btn-nav nav-item nav-link btn-danger"><i class="fas fa-sign-out-alt"></i> Sair</button>
+		</form>
+	</div>
+</nav>
+</header>
+
+<!-- RODAPÉ -->
+<footer th:fragment="rodape">
+	<div class="rodape navbar-dark" style="background-color: #023047">
+		<span>Todos os direitos reservados - 2021 &copy; Tasso Chaves</span>
+	</div>
+</footer>
+
+<script src='/webjars/jquery/3.5.1/jquery.min.js'></script>
+<script src='/webjars/bootstrap/js/bootstrap.min.js'></script>
+
+</body>
+</html>
